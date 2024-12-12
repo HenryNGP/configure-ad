@@ -47,5 +47,8 @@ For dc-1, Click on dc-1 > Networking > ipconfig1 (primary). Then click on ipconf
 <img width="589" alt="image" src="https://github.com/user-attachments/assets/a8dae4a1-d417-4b93-b862-0d4abb98fa9c" />
 <img width="1043" alt="image" src="https://github.com/user-attachments/assets/1d05f800-85f0-4c32-9a6e-06b65e57ebf9" />
 </p>
-
+For client-1, click on client-1 virtual machine > Networking > DNS servers and copy/paste the dc-1 private IP address and save.
+</p>
+<img width="572" alt="image" src="https://github.com/user-attachments/assets/a9652877-214f-45b7-ad90-c4afee3df2af" />
+</p>
 
