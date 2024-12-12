@@ -47,8 +47,22 @@ For dc-1, Click on dc-1 > Networking > ipconfig1 (primary). Then click on ipconf
 <img width="589" alt="image" src="https://github.com/user-attachments/assets/a8dae4a1-d417-4b93-b862-0d4abb98fa9c" />
 <img width="1043" alt="image" src="https://github.com/user-attachments/assets/1d05f800-85f0-4c32-9a6e-06b65e57ebf9" />
 </p>
-For client-1, click on client-1 virtual machine > Networking > DNS servers and copy/paste the dc-1 private IP address and save.
+For client-1, click on client-1 virtual machine > Networking > DNS servers and copy/paste the dc-1 private IP address and save. Then restart the client-1 in Azure.
 </p>
 <img width="572" alt="image" src="https://github.com/user-attachments/assets/a9652877-214f-45b7-ad90-c4afee3df2af" />
+</p>
+"Just for lab testing": Now login dc-1 and turn off the firewall by using a run program the type 'wf.msc' </p>
+<img width="281" alt="image" src="https://github.com/user-attachments/assets/6cc392fc-7244-40b8-83cd-6ca1418adbeb" />
+</p>
+Click on Windows Defender Firewall Properties. All firewall need to be turn off: Doamin, Private, Public Profile. </p>
+<img width="554" alt="image" src="https://github.com/user-attachments/assets/973bd1c4-f5c8-4e18-bb6e-903fc307a871" />
+</p>
+To ensure client-1 ping is on private IP address go to window powershell and type 'ping 10.0.0.4'
+</p>
+<img width="337" alt="image" src="https://github.com/user-attachments/assets/9263af4c-f2d7-4d0a-a2c5-c361d7153bd0" />
+</p>
+And check if client-1 is in private IP address or not type 'ipconfig /all'
+</p>
+<img width="533" alt="image" src="https://github.com/user-attachments/assets/792d340c-df05-41e3-9882-63968d97808b" />
 </p>
 
