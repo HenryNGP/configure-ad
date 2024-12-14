@@ -65,4 +65,13 @@ And check if client-1 is in private IP address or not type 'ipconfig /all'
 </p>
 <img width="533" alt="image" src="https://github.com/user-attachments/assets/792d340c-df05-41e3-9882-63968d97808b" />
 </p>
-
+To install active directory go to dc-1 and go to server manager, then 'add role and features' click next. Then on server roles check 'Active Directory Domain Services' box and install.
+</p>
+<img width="743" alt="image" src="https://github.com/user-attachments/assets/6599f2ed-9186-4a18-aa67-97251227872d" />
+</p>
+After install, we need to promote this server to a domain controller. By click on the flag icon then click on promote > Add a new forest > mydomain.com is what I am using. Uncheck DNS options, and install.
+</p>
+<img width="401" alt="image" src="https://github.com/user-attachments/assets/8371a901-acde-4adc-9cad-7745d228bbf7" />
+</p>
+<img width="575" alt="image" src="https://github.com/user-attachments/assets/9c2502fe-a0d8-4e6a-bddf-5e742369687f" />
+</p>
