@@ -20,7 +20,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Setup Domain Controller and Clinet-1 server in Azure
+- Setup Domain Controller and Client-1 server in Azure
 - Install Active Directory
 - Create Domain Amdin user within the domain
 
