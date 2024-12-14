@@ -22,7 +22,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 - Setup Domain Controller and Client-1 server in Azure
 - Install Active Directory
-- Create Domain Amdin user within the domain
+- Create Domain Admin user within the domain
+- Join Client-1 to domain
+- Setup Remote Desktop for non-administrative user on Client-1
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -51,7 +53,7 @@ For client-1, click on client-1 virtual machine > Networking > DNS servers and c
 </p>
 <img width="572" alt="image" src="https://github.com/user-attachments/assets/a9652877-214f-45b7-ad90-c4afee3df2af" />
 </p>
-"Just for lab testing": Now login dc-1 and turn off the firewall by using a run program the type 'wf.msc' </p>
+"Just for lab testing": Now login dc-1 using remote desktop connection and turn off the firewall by using a run program the type 'wf.msc' </p>
 <img width="281" alt="image" src="https://github.com/user-attachments/assets/6cc392fc-7244-40b8-83cd-6ca1418adbeb" />
 </p>
 Click on Windows Defender Firewall Properties. All firewall need to be turn off: Doamin, Private, Public Profile. </p>
@@ -74,4 +76,41 @@ After install, we need to promote this server to a domain controller. By click o
 <img width="401" alt="image" src="https://github.com/user-attachments/assets/8371a901-acde-4adc-9cad-7745d228bbf7" />
 </p>
 <img width="575" alt="image" src="https://github.com/user-attachments/assets/9c2502fe-a0d8-4e6a-bddf-5e742369687f" />
+</p>
+After the install it will restart and now you need to login using mydomain\"your user" for username login in remote desktop connection. My case is mydomain\labuser.
+</p>
+<img width="313" alt="image" src="https://github.com/user-attachments/assets/8596d771-bf1a-4ad7-9e08-d283f3b682c8" />
+</p>
+To create an Admin user within the domain, first you need to create two oragnizational unit. By typing Active Directory User and Computers on window. Right click on mydomain.com > new > organization unit and name it _EMPLOYEES and _ADMINS.
+</p>
+<img width="560" alt="image" src="https://github.com/user-attachments/assets/c975e9a5-343f-4b11-b2d7-f2bbd407691a" />
+</p>
+<img width="365" alt="image" src="https://github.com/user-attachments/assets/efb1428c-9559-45fe-9bc2-c37ce0d17b2f" />
+</p>
+Create a new admin-user go to admin folder you just created then right click and new user.
+</p>
+<img width="560" alt="image" src="https://github.com/user-attachments/assets/ddd6beef-5470-4995-bfc1-578a1f764c94" />
+</p>
+After creating a user, you need to assgin user as admin by right click on the name then properties > Member of > adds > then type domain admins > check name. This user will become admin.
+</p>
+<img width="489" alt="image" src="https://github.com/user-attachments/assets/776a83a5-dc54-4085-a6b4-c8db8f6c318d" />
+</p>
+To login to admin account 'mydomain\'whateverusername_admin'. My is mydomain\tim_admin.
+</p>
+<img width="326" alt="image" src="https://github.com/user-attachments/assets/bb1ff41d-4c51-4233-a034-1b039c64fe51" />
+</p>
+Now to make client-1 server to login the domain we need to change some setting. Type 'About' in window > 
+Rename > Change > Domain > type mydomain.com. The log in your admin account. Then it restart.
+</p>
+<img width="827" alt="image" src="https://github.com/user-attachments/assets/e7e8918b-a253-4f72-815c-0e3d5fe3c2df" />
+</p>
+<img width="346" alt="image" src="https://github.com/user-attachments/assets/4b839a4d-0b1f-41e4-ad5d-372abf28c1e7" />
+</p>
+To verify if client-1 is in a domain system. Check on Active directory users and computer > mydomain.com > Computer.
+</p>
+<img width="566" alt="image" src="https://github.com/user-attachments/assets/db9fb668-9b8b-40db-943c-8ee316f47c5f" />
+</p>
+To setup remote desktop for non-administrative users on client-1. You need to log in client-1 with admin account. Type "Remote Desktop setting" > 'Select users that can remotely acces this PC' > Add > type 'Domain users'. You can now log into Client-1 as a normal, non-administrative user now.
+</p>
+<img width="615" alt="image" src="https://github.com/user-attachments/assets/27645d4d-94f5-4c7b-81aa-d9ebeb902b1a" />
 </p>
